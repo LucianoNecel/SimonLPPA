@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Simon</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/x-icon" href="/src/imagenes/simon.ico" />
+		<link rel="stylesheet" href="/src/estilos/reset.css" />
+		<link rel="stylesheet" href="/src/estilos/styles.css" />
+
+		<audio id="error">
+			<source src="/src/sonidos/error.mp3" />
+		</audio>
+		<audio id="verde">
+			<source src="/src/sonidos/verde.mp3" />
+		</audio>
+		<audio id="rojo">
+			<source src="/src/sonidos/rojo.mp3" />
+		</audio>
+		<audio id="amarillo">
+			<source src="/src/sonidos/amarillo.mp3" />
+		</audio>
+		<audio id="azul">
+			<source src="/src/sonidos/azul.mp3" />
+		</audio>
+	</head>
+	<body>
+		<div id="puntajeMasAlto">Puntaje más alto: 0</div>
+		<div id="circulo-ext">
+			<button class="button" id="sectorVerde"></button>
+			<button class="button" id="sectorRojo"></button>
+			<button class="button" id="sectorAmarillo"></button>
+			<button class="button" id="sectorAzul"></button>
+			<div id="circulo-int">
+				<div id="titulo">simon</div>
+				<div class="switches">
+					<input type="checkbox" class="activar" id="prender" />
+					<button class="button" id="empezar">Empezar</button>
+					<input type="checkbox" class="activar" id="estricto" />
+				</div>
+				<div class="switchesTexto">
+					<span>PRENDER</span>
+					<span>ESTRICTO</span>
+				</div>
+				<div id="turno"></div>
+				<div class="turnoTexto">TURNO</div>
+			</div>
+		</div>
+		<script src="/src/logica/variables.js" type="module"></script>
+		<script src="/src/logica/elementosdom.js" type="module"></script>
+		<script src="/src/logica/colores.js" type="module"></script>
+		<script src="/src/logica/logica.js" type="module"></script>
+		<script src="/src/logica/main.js" type="module"></script>
+	</body>
+</html>
